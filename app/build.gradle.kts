@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.example.movieapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.movieapp"
         minSdk = 30
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -76,12 +76,12 @@ dependencies {
     implementation("androidx.room:room-paging:2.6.1")
 
     implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
-    kapt("com.google.dagger:hilt-compiler:2.44")
+//    kapt("androidx.hilt:hilt-compiler:1.2.0")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.google.code.gson:gson:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 

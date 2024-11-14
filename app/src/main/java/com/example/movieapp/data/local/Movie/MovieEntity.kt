@@ -1,7 +1,9 @@
 package com.example.movieapp.data.local.Movie
 
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Entity
 data class MovieEntity(
     val adult: Boolean,
     val backdrop_path: String,
