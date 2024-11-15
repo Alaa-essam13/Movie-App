@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                         composable(Screen.Details.rout+"/{movieId}", arguments = listOf(
                             navArgument("movieId"){type= NavType.IntType}
                         )){backStackEntry->
-//                            DetailsScreen(backStackEntry)
+                            DetailsScreen(backStackEntry)
                         }
 
                     }

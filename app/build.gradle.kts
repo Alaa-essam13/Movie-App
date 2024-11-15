@@ -85,7 +85,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
-    implementation("io.coil-kt.coil3:coil-compose:3.0.2")
+    implementation("io.coil-kt.coil3:coil-compose:3.0.3")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.3")
 
     implementation("androidx.compose.material:material-icons-extended:1.5.4")
 

@@ -1,5 +1,6 @@
 package com.example.movieapp.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.movieapp.domain.repository.MovieRepository
@@ -89,6 +90,7 @@ class MovieListViewModel @Inject constructor(
     }
 
     private fun getPopularMovieList(forceFetchFromRemote:Boolean) {
+
         viewModelScope.launch {
             _movieListState.update {
                 it.copy(isLoading = true)
@@ -115,14 +117,17 @@ class MovieListViewModel @Inject constructor(
                                 _movieListState.update {
                                     it.copy(
                                         popularMovieList = movieListState.value.popularMovieList
-                                        +popularMovieList.shuffled()
+                                        + popularMovieList.shuffled()
                                         ,
                                         popularMovieListPage = movieListState.value.popularMovieListPage + 1
+
                                     )
                                 }
+
                             }
                     }
                 }
+                    Log.d("MyLog", result.toString())
 
             }
         }
